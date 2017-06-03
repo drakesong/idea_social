@@ -1,0 +1,6 @@
+Idea Page
+* Find a gem that would help to create a page where users can jot down ideas
+* An Idea Page consists of a list of idea titles. When you click on the idea title, it drops down the idea description.
+* Create buttons for Creating and Editing idea page
+* Implement the ieda page into the community
+* Basic memebers can only view 
