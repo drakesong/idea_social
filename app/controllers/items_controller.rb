@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
+  before_action :own_item, only: [:show, :edit, :update, :destroy]
   before_action:find_item, only: [:show, :edit, :update, :destroy]
   
-  def index
+    def index
     if user_signed_in?
       @items = Item.where(:user_id => current_user.id).order("created_at DESC")
     end
@@ -49,4 +50,11 @@ class ItemsController < ApplicationController
     def find_item
       @item = Item.find(params[:id])
     end
+    
+    def own_item 
+      unless current_user == @item.user
+         flash[:alert] = "You cannot view this item."
+         redirect_to root_path
+      end
+    end  
 end
