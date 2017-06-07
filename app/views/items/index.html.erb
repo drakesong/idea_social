@@ -1,17 +1,17 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-8 col-md-offset-2">
       <h1 class="text-center">Your Ideas</h1><br/>
-      <div class="well">
-        <% if user_signed_in? %>
-          <% @items.each do |item| %>
-            <h2><%= link_to item.title, item %></h2>
+      <% if user_signed_in? %>
+        <% @items.each do |item| %>
+          <div class="list-group">
+            <button type="button" class="list-group-item"><%= link_to item.title, item %></button>
             <p><%= item.description %></p>
-          <% end %>
+          </div>
         <% end %>
-        <br/>
-        <%= link_to "New Item", new_item_path, class: "btn btn-primary" %>
-      </div>
+      <% end %>
+      <br/>
+      <%= link_to "New Item", new_item_path, class: "btn btn-primary" %>
     </div>
   </div>
 </div>
