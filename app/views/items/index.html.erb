@@ -4,9 +4,13 @@
       <h1 class="text-center">Your Ideas</h1><br/>
       <% if user_signed_in? %>
         <% @items.each do |item| %>
-          <div class="list-group">
-            <button type="button" class="list-group-item"><%= link_to item.title, item %></button>
-            <p><%= item.description %></p>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= link_to item.title, item %></h3>
+            </div>
+            <div class="panel-body">
+              <%= item.description %>
+            </div>
           </div>
         <% end %>
       <% end %>
