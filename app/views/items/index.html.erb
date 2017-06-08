@@ -3,26 +3,27 @@
     <h1 class="text-center">Your Ideas</h1><br/>
     <% if user_signed_in? %>
       <% @items.each do |item| %>
-      <div class="col-md-8">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title"><%= link_to item.title, item %></h3>
+            <h3 class="panel-title">
+              <div class="textbox">
+                <p class="alignleft truncate"><%= link_to item.title, item %></p>
+                <p class="alignright">
+                  <%= link_to edit_item_path(item) do %>
+                    <i class="fa fa-lg fa-pencil"></i>
+                  <% end %> &nbsp;
+                  <%= link_to item, method: :delete, data: { confirm: "Areyou sure?" } do %>
+                    <i class="fa fa-lg fa-trash"></i>
+                  <% end %>
+                </p>
+              </div>
+              <div style="clear: both;"></div>
+            </h3>
           </div>
           <div class="panel-body">
             <%= item.description %>
           </div>
         </div>
-      </div>
-      <div class="col-md-2">
-        <p><%= link_to edit_item_path(item) do %></p>
-          <i class="fa fa-lg fa-pencil"></i>
-        <% end %>
-      </div>
-      <div class="col-md-2">
-        <p><%= link_to item, method: :delete, data: { confirm: "Are you sure?" } do %></p>
-          <i class="fa fa-lg fa-trash"></i>
-        <% end %>
-      </div>
       <br/>
       <% end %>
     <% end %>
