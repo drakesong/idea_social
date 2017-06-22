@@ -60,6 +60,9 @@ gem 'simple_form', '3.5.0'
 # Use Paperclip for image upload
 gem 'paperclip', '4.3.6'
 
+# Use Trix for Rich Text Editor
+gem 'trix', '0.10.1'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'

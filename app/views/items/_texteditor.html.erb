@@ -1,0 +1,5 @@
+<%= simple_form_for @item do |f| %>
+  <%= f.input :title, label: "Idea" %>
+  <%= f.trix_editor :description %><br/>
+  <%= f.button :submit %>
+<% end %>
