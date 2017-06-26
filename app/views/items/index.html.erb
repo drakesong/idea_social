@@ -5,20 +5,25 @@
       <% @items.each do |item| %>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">
-              <div class="textbox">
-                <p class="alignleft truncate"><%= link_to item.title, item %></p>
-                <p class="alignright">
+            <table width="100%">
+              <tr>
+                <th width="90%">
+                  <h3 class="panel-title truncate">
+                    <%= link_to item.title, item %>
+                  </h3>
+                </th>
+                <th class="text-center tablehead">
                   <%= link_to edit_item_path(item) do %>
                     <i class="fa fa-lg fa-pencil"></i>
                   <% end %> &nbsp;
-                    <%= link_to item, method: :delete, data: { confirm: "Are you sure?" } do %>
+                </th>
+                <th class="text-center">
+                  <%= link_to item, method: :delete, data: { confirm: "Are you sure?" } do %>
                     <i class="fa fa-lg fa-trash"></i>
                   <% end %>
-                </p>
-              </div>
-              <div style="clear: both;"></div>
-            </h3>
+                </th>
+              </tr>
+            </table>
           </div>
           <div class="panel-body">
             <%= item.description %>

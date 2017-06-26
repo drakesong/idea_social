@@ -2,18 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.alignleft {
-	float: left;
-}
-.alignright {
-	float: right;
-	a:hover, a:focus {
-    text-decoration: none;
-  }
-}
-
-
-
 .panel-title {
   height: 20px;
   line-height: 20px;
@@ -29,4 +17,10 @@
 
 .formatted_content {
   background-color: white;
+}
+
+.tablehead {
+  a:hover, a:focus {
+    text-decoration: none;
+  }
 }
