@@ -24,3 +24,11 @@
     text-decoration: none;
   }
 }
+
+.vertical-truncate {
+  overflow: hidden;
+  line-height: 1.2em;
+  max-height: 3.6em; 
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
