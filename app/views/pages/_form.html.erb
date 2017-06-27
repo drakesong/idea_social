@@ -1,0 +1,4 @@
+<%= simple_form_for(Item.new, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :title, placeholder: "Quickly add your idea here..." %>
+  <%= f.button :submit, "Save!" %>
+<% end %>
