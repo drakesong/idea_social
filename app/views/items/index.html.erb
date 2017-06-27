@@ -12,7 +12,7 @@
                     <%= link_to item.title, item %>
                   </h3>
                 </th>
-                <th class="text-center tablehead">
+                <th class="text-center table-head">
                   <%= link_to edit_item_path(item) do %>
                     <i class="fa fa-lg fa-pencil"></i>
                   <% end %> &nbsp;
@@ -26,7 +26,7 @@
             </table>
           </div>
           <div class="panel-body">
-            <%= item.description %>
+            <%=raw item.description %>
           </div>
         </div>
       <br/>
