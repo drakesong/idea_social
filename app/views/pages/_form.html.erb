@@ -1,4 +1,4 @@
-<%= simple_form_for(Item.new, html: { class: 'form-horizontal' }) do |f| %>
-  <%= f.input :title, placeholder: "Quickly add your idea here..." %>
-  <%= f.button :submit, "Save!" %>
+<%= simple_form_for(Item.new, html: { class: 'form-inline' }) do |f| %>
+  <%= f.input :title, label: false, placeholder: "Quickly add your idea here...", :input_html => { :maxlength =>150, :style=> 'margin: auto'} %>
+  <%= f.button :submit, "Save!", :style => "float: right;" %>
 <% end %>
