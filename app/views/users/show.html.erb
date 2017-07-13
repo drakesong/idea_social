@@ -20,11 +20,9 @@
       <% end %>
       <div class="well profile-block profile-ideas">
         <h3>Ideas</h3>
-        
         <% @user.items.each do |item| %>
-          <%= item.title %>
+          <ul><li><%= item.title %></li></ul>
         <% end %>
-      
     </div>
   </div>
 </div>
