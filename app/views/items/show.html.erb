@@ -3,7 +3,7 @@
     <div class="col-md-8 col-md-offset-2">
       <h2><%= @item.title %></h2><br/>
       <p><%=raw @item.description %></p>
-      
+      <br/><br/><br/>
       <%= link_to "Back", items_path, class: "btn btn-default" %>
       <%= link_to "Edit", edit_item_path(@item), class: "btn btn-info" %>
       <p><%= link_to item_path, method: :delete, data: { confirm: "Are you sure?" } do %></p>
