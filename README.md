@@ -38,6 +38,7 @@ https://idea-social.herokuapp.com/
 * gem 'figaro', '1.1.1'
 * gem 'simple_form', '3.5.0'
 * gem 'paperclip', '4.3.6'
+  * The paperclip dependency defined in Gemfile.lock has a known high severity security vulnerability in version range >= 3.1.4, <= 5.1.0 and should be updated.
 * gem 'trix', '0.10.1'
 * gem 'sqlite3'
 * gem 'byebug', platform: :mri
