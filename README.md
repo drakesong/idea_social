@@ -38,7 +38,6 @@ https://idea-social.herokuapp.com/
 * gem 'figaro', '1.1.1'
 * gem 'simple_form', '3.5.0'
 * gem 'paperclip', '4.3.6'
-  * The paperclip dependency defined in Gemfile.lock has a known high severity security vulnerability in version range >= 3.1.4, <= 5.1.0 and should be updated.
 * gem 'trix', '0.10.1'
 * gem 'sqlite3'
 * gem 'byebug', platform: :mri
@@ -49,3 +48,11 @@ https://idea-social.herokuapp.com/
 * gem 'pg', '0.18.4'
 * gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 * ruby '2.3.0'
+
+#### Note
+GitHub has notified of some security vulnerabilities however this project is no longer being maintained. Here are the vulnerabilities:
+* The paperclip dependency defined in Gemfile.lock has a known high severity security vulnerability in version range >= 3.1.4, <= 5.1.0 and should be updated.
+* Known critical severity security vulnerability detected in nokogiri < 1.8.1 defined in Gemfile.lock.
+Gemfile.lock update suggested: nokogiri ~> 1.8.1.
+* Known moderate severity security vulnerability detected in loofah < 2.2.1 defined in Gemfile.lock.
+Gemfile.lock update suggested: loofah ~> 2.2.1.
